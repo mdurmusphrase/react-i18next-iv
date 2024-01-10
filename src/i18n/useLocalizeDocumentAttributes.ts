@@ -8,7 +8,7 @@ export default function useLocalizeDocumentAttributes() {
     if (i18n.resolvedLanguage) {
       document.documentElement.lang = i18n.resolvedLanguage;
       document.documentElement.dir = i18n.dir(i18n.resolvedLanguage);
-      document.title = t("app_title");
     }
+    document.title = t("app_title");
   }, [i18n, i18n.resolvedLanguage, t]);
 }
