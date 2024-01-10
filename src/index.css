@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .clip-arrow {
+    clip-path: polygon(80% 10%, 0% 10%, 40% 60%);
+  }
+}
+
+.locale-switcher {
+  @apply after:clip-arrow relative flex items-center rounded-md bg-slate-800 py-1 pe-2 ps-2 text-cyan-200 after:absolute after:end-2 after:top-[10px] after:block after:h-3 after:w-3 after:bg-cyan-200 after:content-[''];
+}
+.locale-switcher select {
+  @apply cursor-pointer appearance-none bg-transparent pe-6 text-sm font-light uppercase;
+}
