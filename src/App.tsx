@@ -1,6 +1,6 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import i18nextLogo from "./assets/i18next-logo.png";
+import reactLogo from "./assets/react.svg";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,13 +9,13 @@ function App() {
     <>
       <div>
         <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="w-8 h-8" alt="React logo" />
+          <img src={reactLogo} className="h-8 w-8" alt="React logo" />
         </a>
         <a href="https://i18next.com" target="_blank">
-          <img src={i18nextLogo} className="w-8 h-8" alt="i18next logo" />
+          <img src={i18nextLogo} className="h-8 w-8" alt="i18next logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 className="text-2xl font-bold">React + i18next</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
