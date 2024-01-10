@@ -2,7 +2,7 @@ import i18nextLogo from "../assets/i18next-logo.png";
 import reactLogo from "../assets/react.svg";
 import LocaleSwitcher from "../i18n/LocaleSwitcher";
 
-export default function Header() {
+export default function PageHeader() {
   return (
     <header className="mb-2 flex items-baseline justify-between border-b border-dashed border-slate-600 pb-4">
       <div className="flex items-baseline">

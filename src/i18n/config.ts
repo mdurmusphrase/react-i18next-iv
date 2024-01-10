@@ -1,4 +1,4 @@
-import i18n from "i18next";
+import i18next from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
@@ -8,7 +8,7 @@ export const supportedLngs = {
   ar: "Arabic (العربية)",
 };
 
-i18n
+i18next
   .use(HttpApi)
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -23,4 +23,7 @@ i18n
     },
   });
 
-export default i18n;
+i18next.services.formatter?.add("lowercase", (value) => value.toLowerCase());
+i18next.services.formatter?.add("uppercase", (value) => value.toUpperCase());
+
+export default i18next;
