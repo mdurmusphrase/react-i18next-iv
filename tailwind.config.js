@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         sans: ['"Roboto Slab"', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        "grid-pattern": "url('/v1043-081a.svg')",
+      },
     },
   },
   plugins: [],
