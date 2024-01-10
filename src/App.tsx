@@ -5,7 +5,7 @@ function App() {
   const { t } = useTranslation();
 
   return (
-    <div className="container mx-auto mt-8 max-w-[800px]">
+    <div className="container mx-auto mt-8 max-w-[90%] md:max-w-[800px]">
       <Header />
       <h2 className="mt-4 text-2xl font-semibold">{t("hello_world")}</h2>
     </div>
