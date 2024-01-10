@@ -9,7 +9,7 @@ export default {
         sans: ['"Roboto Slab"', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        "grid-pattern": "url('/v1043-081a.svg')",
+        "grid-pattern": "url('/img/v1043-081a.svg')",
       },
     },
   },
