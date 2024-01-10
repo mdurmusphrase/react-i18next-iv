@@ -6,8 +6,8 @@
     "title": "Interpolation",
     "intro": "Change the first name and last name values to see them interpolated into the translated strings. Try this in different languages by using the language switcher in the top bar.",
     "user_greeting": "Hello, {{firstName}} {{lastName}} 👋",
-    "user_greeting_lowercase": "[With lowercase formatter] {{firstName, lowercase}} {{lastName, lowercase}} 👋",
-    "user_greeting_uppercase": "[With uppercase formatter] {{firstName, uppercase}} {{lastName, uppercase}} 👋",
+    "user_greeting_lowercase": "[مع منسق للحروف الصغيرة] {{firstName, lowercase}} {{lastName, lowercase}} 👋",
+    "user_greeting_uppercase": "[مع منسق للحروف الكبيرة] {{firstName, uppercase}} {{lastName, uppercase}} 👋",
     "first_name_label": "First name",
     "last_name_label": "Last name"
   }
