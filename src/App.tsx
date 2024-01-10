@@ -1,16 +1,11 @@
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import useLocalizeDocumentAttributes from "./i18n/useLocalizeDocumentAttributes";
 import Header from "./layout/Header";
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  useEffect(() => {
-    if (i18n.resolvedLanguage) {
-      document.documentElement.lang = i18n.resolvedLanguage;
-      document.documentElement.dir = i18n.dir(i18n.resolvedLanguage);
-    }
-  }, [i18n, i18n.resolvedLanguage]);
+  useLocalizeDocumentAttributes();
 
   return (
     <div className="container mx-auto mt-8 max-w-[90%] md:max-w-[800px]">
