@@ -14,7 +14,7 @@ export default function Header() {
             <img src={i18nextLogo} className="h-6 w-6" alt="i18next logo" />
           </a>
         </span>
-        <span className="ml-2 text-xl">
+        <span className="ms-2 text-xl">
           <span className="font-semibold">React + i18next</span>{" "}
           <span className="font-light">Playground</span>
         </span>

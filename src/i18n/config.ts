@@ -17,7 +17,7 @@ i18n
   .init({
     fallbackLng: "en",
     supportedLngs: Object.keys(supportedLngs),
-    debug: true,
+    debug: import.meta.env.DEV,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
