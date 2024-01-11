@@ -4,7 +4,7 @@ import LocaleSwitcher from "../i18n/LocaleSwitcher";
 
 export default function PageHeader() {
   return (
-    <header className="mb-2 flex items-baseline justify-between border-b border-dashed border-slate-600 pb-4">
+    <header className="container fixed mx-auto mb-2 flex max-w-[87%] items-baseline justify-between border-b border-dashed border-slate-600 bg-slate-950 pb-4 pt-2 md:max-w-[765px]">
       <div className="flex items-baseline">
         <span className="relative top-[5px] flex gap-[3px] rounded-full bg-slate-800 px-2 py-1.5">
           <a href="https://react.dev" target="_blank">
@@ -14,7 +14,7 @@ export default function PageHeader() {
             <img src={i18nextLogo} className="h-6 w-6" alt="i18next logo" />
           </a>
         </span>
-        <span className="ms-2 text-xl">
+        <span className="ms-2 hidden text-xl sm:inline">
           <span className="font-semibold">React + i18next</span>{" "}
           <span className="font-light">Playground</span>
         </span>

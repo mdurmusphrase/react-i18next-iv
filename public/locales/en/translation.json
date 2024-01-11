@@ -19,5 +19,15 @@
     "trees_grown_zero": "We have not grown any trees yet",
     "trees_grown_one": "We have grown one tree 🌳",
     "trees_grown_other": "We have grown {{count, number}} trees 🌳"
+  },
+  "numbers": {
+    "title": "Numbers",
+    "intro": "Change the number to see it formatted in different ways. Try this in different languages.",
+    "num_label": "Number",
+    "numbers_in_messages": "Numbers in messages",
+    "simple": "A simple number (default formatting): {{value, number}}",
+    "currency": "Currency formatting: {{value, currency(USD)}}",
+    "percent": "Percentage (use values between 0 and 1): {{value, number(style: percent)}}",
+    "standalone": "Standalone numbers"
   }
 }

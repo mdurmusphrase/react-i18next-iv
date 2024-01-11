@@ -17,7 +17,7 @@ export default function Plurals() {
         <input
           type="number"
           id="plurals_count"
-          className="input"
+          className="input input-number"
           value={count}
           onChange={(e) => setCount(parseInt(e.target.value))}
         />
