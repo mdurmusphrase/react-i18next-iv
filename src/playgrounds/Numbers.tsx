@@ -9,7 +9,7 @@ export default function Numbers() {
   const [num, setNum] = useState(0.99);
 
   return (
-    <section className="mt-8 pb-32">
+    <section className="mt-8">
       <h3 className="section-title">{t("numbers.title")}</h3>
       <p className="prose-p">{t("numbers.intro")}</p>
       <ProjectFiles
@@ -43,9 +43,9 @@ export default function Numbers() {
       <h4 className="mt-4">{t("numbers.standalone")}</h4>
       <p className="prose-p">{t("numbers.standalone_help")}</p>
 
-      <div className="output-island flex w-56 justify-center gap-6">
-        <p>{formatNumber(num)}</p>
-        <p>{formatNumber(num, { style: "currency", currency: "USD" })}</p>
+      <div className="output-island flex justify-center gap-6">
+        <p>{formatNumber(num)}</p> |{" "}
+        <p>{formatNumber(num, { style: "currency", currency: "USD" })}</p> |{" "}
         <p>{formatNumber(num, { style: "percent" })}</p>
       </div>
     </section>

@@ -13,7 +13,7 @@ export default function Plurals() {
       <ProjectFiles
         files={[
           "src/playgrounds/Plurals.tsx",
-          'public/locales/en/translation.json (under "plurals" key)',
+          'public/locales/{locale}/translation.json (under "plurals" key)',
         ]}
       />
       <p className="prose-p">{t("plurals.help")}</p>

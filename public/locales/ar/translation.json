@@ -37,5 +37,17 @@
     "percent": "النسبة المئوية (استخدم القيم بين ٠  و ١): {{value, number(style: percent)}}",
     "standalone": "أرقام مستقلة",
     "standalone_help": "هذه الأرقام ليست مضمنة في رسالة الترجمة، بل يتم إخراجها بواسطة Intl.NumberFormat مباشرة، ويتم إخراجهم إلى المكون JSX دون المرور عبر i18next."
+  },
+  "dates": {
+    "title": "التواريخ",
+    "intro": "يستخدم i18next كائن Intl.DateTimeFormat القياسي لتنسيق التاريخ المترجم.",
+    "help": "قم بتغيير التاريخ لرؤيته منسقًا بطرق مختلفة. جرب هذا بلغات مختلفة.",
+    "date_label": "التاريخ",
+    "dates_in_messages": "التواريخ في الرسائل",
+    "simple": "تاريخ بسيط (التنسيق الافتراضي): {{value, datetime}}",
+    "long": "تنسيق التاريخ الطويل: {{value, datetime(dateStyle: long)}}",
+    "custom": "تنسيق التاريخ المخصص: {{value, datetime(weekday: long; year: 2-digit; month: short; day: numeric)}}",
+    "standalone": "تواريخ مستقلة",
+    "standalone_help": "هذه ليست مضمنة في رسالة الترجمة. إنهم يستخدمون Intl.DateTimeFormat مباشرة ويتم إخراجهم إلى المكون JSX دون المرور عبر i18next."
   }
 }

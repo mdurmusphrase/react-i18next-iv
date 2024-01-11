@@ -34,5 +34,17 @@
     "percent": "Percentage (use values between 0 and 1): {{value, number(style: percent)}}",
     "standalone": "Standalone numbers",
     "standalone_help": "These aren't embedded in a translation message. They use Intl.NumberFormat directly and are output into the component JSX without going through i18next."
+  },
+  "dates": {
+    "title": "Dates",
+    "intro": "i18next uses the standard Intl.DateTimeFormat object for localized date formatting.",
+    "help": "Change the date to see it formatted in different ways. Try this in different languages.",
+    "date_label": "Date",
+    "dates_in_messages": "Dates in messages",
+    "simple": "A simple date (default formatting): {{value, datetime}}",
+    "long": "Long date format: {{value, datetime(dateStyle: long)}}",
+    "custom": "Custom date format: {{value, datetime(weekday: long; year: 2-digit; month: short; day: numeric)}}",
+    "standalone": "Standalone dates",
+    "standalone_help": "These aren't embedded in a translation message. They use Intl.DateTimeFormat directly and are output into the component JSX without going through i18next."
   }
 }
