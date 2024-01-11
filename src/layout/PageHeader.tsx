@@ -1,3 +1,4 @@
+import { Trans } from "react-i18next";
 import i18nextLogo from "../assets/i18next-logo.png";
 import reactLogo from "../assets/react.svg";
 import LocaleSwitcher from "../i18n/LocaleSwitcher";
@@ -15,8 +16,10 @@ export default function PageHeader() {
           </a>
         </span>
         <span className="ms-2 hidden text-xl sm:inline">
-          <span className="font-semibold">React + i18next</span>{" "}
-          <span className="font-light">Playground</span>
+          <Trans i18nKey="app_brand">
+            <span className="font-semibold">React + i18next</span>{" "}
+            <span className="font-light">Playground</span>
+          </Trans>
         </span>
       </div>
 

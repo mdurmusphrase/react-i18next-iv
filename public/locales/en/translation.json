@@ -1,5 +1,6 @@
 {
   "app_title": "React + i18next Playground",
+  "app_brand": "<0>React + i18next</0> <2>Playground</2>",
   "hello_world": "Hello, World!",
   "translating_text_title": "Translating text",
   "project_source_files": "Project source files",
