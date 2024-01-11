@@ -8,20 +8,12 @@ export default function Interpolation() {
 
   return (
     <section>
-      <h3 className="mt-4 text-xl font-medium">{t("interpolation.title")}</h3>
+      <h3 className="section-title">{t("interpolation.title")}</h3>
+      <p className="section-intro">{t("interpolation.intro")}</p>
 
-      <p className="mt-2 text-sm font-light text-slate-400">
-        {t("interpolation.intro")}
-      </p>
-
-      <hr className="mx-auto mb-4 mt-4 max-w-[90%] border-[0.5px] border-dashed border-slate-600" />
-
-      <div className="flex flex-col items-baseline sm:flex-row sm:justify-center sm:gap-16">
+      <div className="mb-6 flex flex-col items-baseline sm:flex-row sm:justify-center sm:gap-16">
         <div className="mt-4">
-          <label
-            htmlFor="firstName"
-            className="inline-block w-32 pe-4 text-end sm:w-auto sm:text-start"
-          >
+          <label htmlFor="firstName" className="label">
             {t("interpolation.first_name_label")}
           </label>
           <input
@@ -30,14 +22,11 @@ export default function Interpolation() {
             id="firstName"
             autoComplete="off"
             onChange={(e) => setFirstName(e.target.value)}
-            className="rounded-sm bg-slate-100 px-2 py-1 text-slate-900"
+            className="input"
           />
         </div>
         <div className="mt-1">
-          <label
-            htmlFor="lastName"
-            className="inline-block w-32 pe-4 text-end sm:w-auto sm:text-start"
-          >
+          <label htmlFor="lastName" className="label">
             {t("interpolation.last_name_label")}
           </label>
           <input
@@ -46,26 +35,24 @@ export default function Interpolation() {
             id="lastName"
             autoComplete="off"
             onChange={(e) => setLastName(e.target.value)}
-            className="rounded-sm bg-slate-100 px-2 py-1 text-slate-900"
+            className="input"
           />
         </div>
       </div>
 
-      <div className="mx-8 mt-6 rounded-md bg-slate-900 p-3 px-5">
-        <p>{t("interpolation.user_greeting", { firstName, lastName })}</p>
-      </div>
+      <p className="message-island">
+        {t("interpolation.user_greeting", { firstName, lastName })}
+      </p>
 
-      <div className="mx-8 mt-3 rounded-md bg-slate-900 p-3 px-5">
-        <p>
-          {t("interpolation.user_greeting_lowercase", { firstName, lastName })}
-        </p>
-      </div>
+      <h4 className="mt-4 text-lg">{t("interpolation.custom_formatters")}</h4>
 
-      <div className="mx-8 mt-3 rounded-md bg-slate-900 p-3 px-5">
-        <p>
-          {t("interpolation.user_greeting_uppercase", { firstName, lastName })}
-        </p>
-      </div>
+      <p className="message-island">
+        {t("interpolation.user_greeting_lowercase", { firstName, lastName })}
+      </p>
+
+      <p className="message-island">
+        {t("interpolation.user_greeting_uppercase", { firstName, lastName })}
+      </p>
     </section>
   );
 }

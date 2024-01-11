@@ -8,6 +8,29 @@
   }
 }
 
+hr {
+  @apply mx-4 my-8 border-b border-t-0 border-dashed border-b-slate-500;
+}
+
+.section-title {
+  @apply mt-4 text-xl font-medium;
+}
+
+.section-intro {
+  @apply mb-4 mt-2 border-b-[0.5px] border-dashed border-b-slate-600 pb-4 text-sm font-light text-slate-400;
+}
+
+.label {
+  @apply inline-block w-32 pe-4 text-end sm:w-auto sm:text-start;
+}
+.input {
+  @apply rounded-sm bg-slate-100 px-2 py-1 text-slate-900;
+}
+
+.message-island {
+  @apply mx-8 mt-3 rounded-md bg-slate-900 p-3 px-5;
+}
+
 .locale-switcher {
   @apply after:clip-arrow relative flex items-center rounded-md bg-slate-800 py-1 pe-2 ps-2 text-cyan-200 after:absolute after:end-2 after:top-[10px] after:block after:h-3 after:w-3 after:bg-cyan-200 after:content-[''];
 }
