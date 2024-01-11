@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import ProjectFiles from "./_ProjectFiles";
 
 export default function Interpolation() {
   const { t } = useTranslation();
@@ -10,8 +11,15 @@ export default function Interpolation() {
     <section>
       <h3 className="section-title">{t("interpolation.title")}</h3>
       <p className="prose-p">{t("interpolation.intro")}</p>
+      <ProjectFiles
+        files={[
+          "src/playgrounds/Interpolation.tsx",
+          'public/locales/{locale}/translation.json (under "interpolation" key)',
+        ]}
+      />
+      <p className="prose-p">{t("interpolation.help")}</p>
 
-      <div className="mb-6 flex flex-col items-baseline sm:flex-row sm:justify-center sm:gap-16">
+      <div className="mb-6 mt-2 flex flex-col items-baseline sm:flex-row sm:justify-center sm:gap-16">
         <div className="mt-4">
           <label htmlFor="firstName" className="label">
             {t("interpolation.first_name_label")}

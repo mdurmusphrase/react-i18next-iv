@@ -2,9 +2,11 @@
   "app_title": "React + i18next Playground",
   "hello_world": "Hello, World!",
   "translating_text_title": "Translating text",
+  "project_source_files": "Project source files",
   "interpolation": {
     "title": "Interpolation",
-    "intro": "Change the first name and last name values to see them interpolated into the translated strings. Try this in different languages by using the language switcher in the top bar.",
+    "intro": "Interpolation is about injecting runtime values into translation messages.",
+    "help": "Change the first name and last name values to see them interpolated into the translated strings. Try this in different languages by using the language switcher in the top bar.",
     "user_greeting": "Hello, {{firstName}} {{lastName}} 👋",
     "user_greeting_lowercase": "[With lowercase formatter] {{firstName, lowercase}} {{lastName, lowercase}} 👋",
     "custom_formatters": "Custom formatters",
@@ -14,7 +16,8 @@
   },
   "plurals": {
     "title": "Plurals",
-    "intro": "Change the count to see the various plural forms for the selected language. Try this in different languages.",
+    "intro": "Different languages have different plural rules (not just singular | plural). i18next uses the standard Intl.PluralRules object for localized pluralization.",
+    "help": "Change the count to see the various plural forms for the selected language. Try this in different languages.",
     "count_label": "Count",
     "trees_grown_zero": "We have not grown any trees yet",
     "trees_grown_one": "We have grown one tree 🌳",
@@ -29,6 +32,7 @@
     "simple": "A simple number (default formatting): {{value, number}}",
     "currency": "Currency formatting: {{value, currency(USD)}}",
     "percent": "Percentage (use values between 0 and 1): {{value, number(style: percent)}}",
-    "standalone": "Standalone numbers"
+    "standalone": "Standalone numbers",
+    "standalone_help": "These aren't embedded in a translation message. They use Intl.NumberFormat directly and are output into the component JSX without going through i18next."
   }
 }

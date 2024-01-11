@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import ProjectFiles from "./_ProjectFiles";
 
 export default function Plurals() {
   const { t } = useTranslation();
@@ -9,8 +10,15 @@ export default function Plurals() {
     <section className="mt-8">
       <h3 className="section-title">{t("plurals.title")}</h3>
       <p className="prose-p">{t("plurals.intro")}</p>
+      <ProjectFiles
+        files={[
+          "src/playgrounds/Plurals.tsx",
+          'public/locales/en/translation.json (under "plurals" key)',
+        ]}
+      />
+      <p className="prose-p">{t("plurals.help")}</p>
 
-      <div className="sm:ms-12">
+      <div className="mt-4 sm:ms-12">
         <label htmlFor="plurals_count" className="label">
           {t("plurals.count_label")}
         </label>
