@@ -22,7 +22,8 @@
   },
   "numbers": {
     "title": "Numbers",
-    "intro": "Change the number to see it formatted in different ways. Try this in different languages.",
+    "intro": "i18next uses the standard Intl.NumberFormat object for localized number formatting.",
+    "help": "Change the number to see it formatted in different ways. Try this in different languages.",
     "num_label": "Number",
     "numbers_in_messages": "Numbers in messages",
     "simple": "A simple number (default formatting): {{value, number}}",

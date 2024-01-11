@@ -16,7 +16,7 @@ hr {
   @apply mt-4 text-xl font-medium;
 }
 
-.section-intro {
+.prose-p {
   @apply mt-2 text-sm font-light text-slate-400;
 }
 
@@ -31,7 +31,7 @@ hr {
   @apply w-28;
 }
 
-.message-island {
+.output-island {
   @apply mx-8 mt-3 rounded-md bg-cyan-200/10 p-3 px-5 font-light text-cyan-400;
 }
 

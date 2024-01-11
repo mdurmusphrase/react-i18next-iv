@@ -9,7 +9,7 @@ export default function Interpolation() {
   return (
     <section>
       <h3 className="section-title">{t("interpolation.title")}</h3>
-      <p className="section-intro">{t("interpolation.intro")}</p>
+      <p className="prose-p">{t("interpolation.intro")}</p>
 
       <div className="mb-6 flex flex-col items-baseline sm:flex-row sm:justify-center sm:gap-16">
         <div className="mt-4">
@@ -40,17 +40,17 @@ export default function Interpolation() {
         </div>
       </div>
 
-      <p className="message-island">
+      <p className="output-island">
         {t("interpolation.user_greeting", { firstName, lastName })}
       </p>
 
       <h4 className="mt-4 text-lg">{t("interpolation.custom_formatters")}</h4>
 
-      <p className="message-island">
+      <p className="output-island">
         {t("interpolation.user_greeting_lowercase", { firstName, lastName })}
       </p>
 
-      <p className="message-island">
+      <p className="output-island">
         {t("interpolation.user_greeting_uppercase", { firstName, lastName })}
       </p>
     </section>

@@ -8,7 +8,7 @@ export default function Plurals() {
   return (
     <section className="mt-8">
       <h3 className="section-title">{t("plurals.title")}</h3>
-      <p className="section-intro">{t("plurals.intro")}</p>
+      <p className="prose-p">{t("plurals.intro")}</p>
 
       <div className="sm:ms-12">
         <label htmlFor="plurals_count" className="label">
@@ -23,7 +23,7 @@ export default function Plurals() {
         />
       </div>
 
-      <p className="message-island">{t("plurals.trees_grown", { count })}</p>
+      <p className="output-island">{t("plurals.trees_grown", { count })}</p>
     </section>
   );
 }
