@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { number } from "./formatters";
 
 export default function useNumberFormatter(): (
   value: number,
@@ -7,6 +8,6 @@ export default function useNumberFormatter(): (
   const { i18n } = useTranslation();
 
   return function (value: number, options?: Intl.NumberFormatOptions) {
-    return new Intl.NumberFormat(i18n.resolvedLanguage, options).format(value);
+    return number(value, i18n.resolvedLanguage, options);
   };
 }

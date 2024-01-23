@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { datetime } from "./formatters";
 
 export default function useDateTimeFormatter(): (
   value: Date,
@@ -7,8 +8,6 @@ export default function useDateTimeFormatter(): (
   const { i18n } = useTranslation();
 
   return function (value: Date, options?: Intl.DateTimeFormatOptions) {
-    return new Intl.DateTimeFormat(i18n.resolvedLanguage, options).format(
-      value,
-    );
+    return datetime(value, i18n.resolvedLanguage, options);
   };
 }
