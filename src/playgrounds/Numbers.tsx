@@ -10,13 +10,16 @@ export default function Numbers() {
 
   return (
     <section className="mt-8">
-      <h3 className="section-title">{t("numbers.title")}</h3>
+      <h3 className="section-title">
+        {t("numbers.title")}
+      </h3>
       <p className="prose-p">{t("numbers.intro")}</p>
       <ProjectFiles
         files={[
           "src/playgrounds/Numbers.tsx",
           'public/locales/{locale}/translation.json (under "numbers" key)',
           "src/i18n/useNumberFormatter.ts",
+          "src/i18n/formatters.tsx",
         ]}
       />
       <p className="prose-p">{t("numbers.help")}</p>
@@ -30,23 +33,40 @@ export default function Numbers() {
           id="numbers_num"
           className="input input-number"
           value={num}
-          onChange={(e) => setNum(parseFloat(e.target.value))}
+          onChange={(e) =>
+            setNum(parseFloat(e.target.value))
+          }
         />
       </div>
 
-      <h4 className="mt-4">{t("numbers.numbers_in_messages")}</h4>
+      <h4 className="mt-4">
+        {t("numbers.numbers_in_messages")}
+      </h4>
 
-      <p className="output-island">{t("numbers.simple", { value: num })}</p>
-      <p className="output-island">{t("numbers.currency", { value: num })}</p>
-      <p className="output-island">{t("numbers.percent", { value: num })}</p>
+      <p className="output-island">
+        {t("numbers.simple", { value: num })}
+      </p>
+      <p className="output-island">
+        {t("numbers.currency", { value: num })}
+      </p>
+      <p className="output-island">
+        {t("numbers.percent", { value: num })}
+      </p>
 
       <h4 className="mt-4">{t("numbers.standalone")}</h4>
-      <p className="prose-p">{t("numbers.standalone_help")}</p>
+      <p className="prose-p">
+        {t("numbers.standalone_help")}
+      </p>
 
       <div className="output-island flex justify-center gap-6">
         <p>{formatNumber(num)}</p> |{" "}
-        <p>{formatNumber(num, { style: "currency", currency: "USD" })}</p> |{" "}
-        <p>{formatNumber(num, { style: "percent" })}</p>
+        <p>
+          {formatNumber(num, {
+            style: "currency",
+            currency: "USD",
+          })}
+        </p>{" "}
+        | <p>{formatNumber(num, { style: "percent" })}</p>
       </div>
     </section>
   );

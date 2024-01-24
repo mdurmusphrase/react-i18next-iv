@@ -1,6 +1,10 @@
 import { useTranslation } from "react-i18next";
 
-export default function ProjectFiles({ files = [] }: { files: string[] }) {
+export default function ProjectFiles({
+  files = [],
+}: {
+  files: string[];
+}) {
   const { t } = useTranslation();
 
   return (
@@ -9,7 +13,10 @@ export default function ProjectFiles({ files = [] }: { files: string[] }) {
         {t("project_source_files")}
       </h4>
 
-      <ul className="font-mono text-sm text-cyan-500" dir="ltr">
+      <ul
+        className="ms-3 list-outside list-disc font-mono text-sm text-cyan-500"
+        dir="ltr"
+      >
         {files.map((file) => (
           <li key={file}>{file}</li>
         ))}

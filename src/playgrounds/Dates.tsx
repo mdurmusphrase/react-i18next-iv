@@ -24,6 +24,7 @@ export default function Dates() {
           "src/playgrounds/Dates.tsx",
           'public/locales/{locale}/translation.json (under "dates" key)',
           "src/i18n/useDateTimeFormatter.ts",
+          "src/i18n/formatters.tsx",
         ]}
       />
       <p className="prose-p">{t("dates.help")}</p>
@@ -37,18 +38,30 @@ export default function Dates() {
           id="dates_date"
           className="input"
           value={dateForInputValue}
-          onChange={(e) => setDate(new Date(e.target.value))}
+          onChange={(e) =>
+            setDate(new Date(e.target.value))
+          }
         />
       </div>
 
-      <h4 className="mt-4">{t("dates.dates_in_messages")}</h4>
+      <h4 className="mt-4">
+        {t("dates.dates_in_messages")}
+      </h4>
 
-      <p className="output-island">{t("dates.simple", { value: date })}</p>
-      <p className="output-island">{t("dates.long", { value: date })}</p>
-      <p className="output-island">{t("dates.custom", { value: date })}</p>
+      <p className="output-island">
+        {t("dates.simple", { value: date })}
+      </p>
+      <p className="output-island">
+        {t("dates.long", { value: date })}
+      </p>
+      <p className="output-island">
+        {t("dates.custom", { value: date })}
+      </p>
 
       <h4 className="mt-4">{t("dates.standalone")}</h4>
-      <p className="prose-p">{t("dates.standalone_help")}</p>
+      <p className="prose-p">
+        {t("dates.standalone_help")}
+      </p>
 
       <div className="output-island flex justify-center gap-6">
         <p>{formatDate(date)}</p> |{" "}
