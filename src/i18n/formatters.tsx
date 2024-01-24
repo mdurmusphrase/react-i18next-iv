@@ -14,30 +14,61 @@ export function uppercase(value: string) {
   return value.toUpperCase();
 }
 
+/**
+ * Returns the default qualified locale code
+ * (language-REGION) for the given locale.
+ *
+ * @param lng The locale code.
+ * @returns The qualified locale code, including region.
+ */
 function qualifiedLngFor(lng: string): string {
-  return lng === "ar" ? "ar-EG" : "en-CA";
+  switch (lng) {
+    case "ar":
+      return "ar-EG";
+    case "en":
+      return "en-US";
+    default:
+      return lng;
+  }
 }
 
 export function datetime(
   value: Date | number,
   lng: string | undefined,
   options?: Intl.DateTimeFormatOptions,
-) {
-  return new Intl.DateTimeFormat(qualifiedLngFor(lng!), options).format(value);
+): string {
+  return new Intl.DateTimeFormat(
+    qualifiedLngFor(lng!),
+    options,
+  ).format(value);
 }
 
+/**
+ * Formats a number.
+ *
+ * @param value - The number to format.
+ * @param lng - The language to format the number in.
+ * @param options
+ * @returns The formatted number.
+ */
 export function number(
   value: number,
   lng: string | undefined,
   options?: Intl.NumberFormatOptions,
-) {
-  return new Intl.NumberFormat(qualifiedLngFor(lng!), options).format(value);
+): string {
+  return new Intl.NumberFormat(
+    qualifiedLngFor(lng!),
+    options,
+  ).format(value);
 }
 
 export function currency(
   value: number,
   lng: string | undefined,
   options?: Intl.NumberFormatOptions,
-) {
-  return number(value, lng, { style: "currency", ...options });
+): string {
+  return number(value, lng, {
+    style: "currency",
+    ...options,
+  });
 }
