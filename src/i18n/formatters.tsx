@@ -48,7 +48,7 @@ export function datetime(
  *
  * @param value - The number to format.
  * @param lng - The language to format the number in.
- * @param options
+ * @param options - passed to Intl.NumberFormat.
  * @returns The formatted number.
  */
 export function number(
@@ -62,6 +62,14 @@ export function number(
   ).format(value);
 }
 
+/**
+ * Formats a number as currency.
+ *
+ * @param value - The number to format.
+ * @param lng - The language to format the number in.
+ * @param options - passed to Intl.NumberFormat.
+ * @returns The formatted currency string.
+ */
 export function currency(
   value: number,
   lng: string | undefined,
